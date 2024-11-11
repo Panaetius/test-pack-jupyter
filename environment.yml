@@ -2,4 +2,5 @@ name: base
 channels:
   - conda-forge
 dependencies:
+  - jupyterlab
   - pytorch
