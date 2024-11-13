@@ -2,6 +2,7 @@ ARG BASE_IMAGE=paketobuildpacks/run-jammy-base
 
 
 FROM $BASE_IMAGE
+ARG HOME
 
 LABEL maintainer="Swiss Data Science Center <info@datascience.ch>"
 
