@@ -38,6 +38,8 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     chmod a+x /usr/local/bin/powerline-shell 
 
 USER cnb
+RUN mkdir $HOME/.jupyter_config
+COPY jupyter_server_config.py jupyter_notebook_config.py $HOME/.jupyter_config/
 
 
 # configure bash and shell prompt
