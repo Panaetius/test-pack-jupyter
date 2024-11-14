@@ -45,8 +45,9 @@ COPY jupyter_server_config.py jupyter_notebook_config.py $HOME/.jupyter_config/
 # configure bash and shell prompt
 ENV PATH=$HOME/.local/bin:$PATH
 ENV SHELL bash
-COPY --chown=1000:100 bashrc /renku/
+COPY --chown=1000:100 bashrc profile /renku/
 RUN cat "/renku/bashrc" >> "${HOME}/.bashrc"
+RUN cat "/renku/profile" >> "${HOME}/.profile"
 
 COPY entrypoint.sh /entrypoint.sh
 
